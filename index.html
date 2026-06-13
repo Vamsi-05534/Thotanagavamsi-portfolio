@@ -153,11 +153,47 @@ a.contact-item:hover .contact-item-text h3{color:#4EE3B4}
 /* ── TABLET (769px – 1024px) ── */
 @media screen and (max-width:1024px) and (min-width:769px){
   .navbar{padding:1rem 2rem}
-  .navbar-ops{gap:1.5rem}
-  .hero{padding:0 5%}
-  .hero-content{margin-left:0}
-  .hero-image{right:5%}
-  .hero-image img{min-width:280px;width:30vw}
+  .navbar-ops{gap:1.2rem;font-size:.85rem}
+
+  /* Hero: side by side, image right, text left */
+  .hero{
+    min-height:calc(100vh - 72px);
+    padding:0 5%;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+  }
+  .hero-content{
+    margin-left:0;
+    z-index:10;
+    width:55%;
+  }
+  .hero-content h1{
+    font-size:clamp(3rem,7vw,5rem);
+    line-height:.95;
+    margin-right:0;
+  }
+  .hero-content p{width:90%}
+  .same{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:1.2rem;
+  }
+  .hero-image{
+    position:absolute;
+    right:3%;
+    bottom:0;
+    z-index:1;
+  }
+  .hero-image img{
+    width:38vw;
+    min-width:260px;
+    max-width:380px;
+    max-height:80vh;
+    object-fit:contain;
+    opacity:.95;
+  }
+
   .about{padding:5rem 4rem}
   .education{padding:5rem 4rem}
   .skills{padding:5rem 4rem}
@@ -181,8 +217,8 @@ a.contact-item:hover .contact-item-text h3{color:#4EE3B4}
   .hero-content p{width:70%;font-size:.95rem}
   .same{flex-direction:column;align-items:flex-start;gap:1rem}
   .contact-btn{width:160px;height:2.8rem;font-size:.9rem}
-  .hero-image{position:absolute;right:-10px;bottom:0;z-index:1}
-  .hero-image img{width:clamp(180px,52vw,280px);min-width:0;max-width:280px;height:auto;opacity:.7}
+  .hero-image{position:absolute;right:-5px;bottom:0;z-index:1}
+  .hero-image img{width:clamp(220px,62vw,320px);min-width:0;max-width:320px;height:auto;opacity:.9}
 
   /* Stats */
   .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;padding:20px;width:100%;margin-top:20px}
